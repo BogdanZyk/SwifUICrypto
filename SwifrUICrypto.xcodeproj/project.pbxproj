@@ -26,6 +26,7 @@
 		5ACC982E280F3C100048FB19 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACC982D280F3C100048FB19 /* HomeViewModel.swift */; };
 		5ACC9832280F3CC00048FB19 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACC9831280F3CC00048FB19 /* CircleButtonView.swift */; };
 		5ACC9834280F40780048FB19 /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACC9833280F40780048FB19 /* CircleButtonAnimationView.swift */; };
+		5ACC9836280F481A0048FB19 /* CounsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACC9835280F481A0048FB19 /* CounsRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		5ACC982D280F3C100048FB19 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5ACC9831280F3CC00048FB19 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		5ACC9833280F40780048FB19 /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
+		5ACC9835280F481A0048FB19 /* CounsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounsRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				5ACC982B280F3B8D0048FB19 /* HomeView.swift */,
+				5ACC9835280F481A0048FB19 /* CounsRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				5ACC9825280F3ADF0048FB19 /* StatisticModel.swift in Sources */,
 				5ACC9817280F3A5E0048FB19 /* String.swift in Sources */,
 				5ACC9815280F3A5E0048FB19 /* Date.swift in Sources */,
+				5ACC9836280F481A0048FB19 /* CounsRowView.swift in Sources */,
 				5ACC981A280F3A5E0048FB19 /* Color.swift in Sources */,
 				5ACC9832280F3CC00048FB19 /* CircleButtonView.swift in Sources */,
 				5ACC9818280F3A5E0048FB19 /* Double.swift in Sources */,

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject private var vm: HomeViewModel
     @State private var showPortfolio: Bool = false
     
     var body: some View {
@@ -16,6 +17,16 @@ struct HomeView: View {
                 .ignoresSafeArea()
             VStack{
                 homeHeader
+                if !showPortfolio{
+                    List{
+                        ForEach(vm.allCouns) {coun in
+                            CounsRowView(coun: coun, showHoldingsColums: false)
+                        }
+                    }
+                    .listStyle(PlainListStyle())
+                    .transition(.move(edge: .leading))
+                }
+                
                 Spacer(minLength: 0)
             }
         }
@@ -27,9 +38,10 @@ struct HomeView_Previews: PreviewProvider {
         NavigationView {
             HomeView()
                 .navigationBarHidden(true)
+                
         }
         .preferredColorScheme(.light)
-        
+        .environmentObject(dev.homeVM)
     }
 }
 
