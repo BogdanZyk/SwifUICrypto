@@ -5,18 +5,26 @@
 //  Created by Богдан Зыков on 19.04.2022.
 //
 
-import SwiftUI
+
+import Combine
 
 class HomeViewModel: ObservableObject {
     
-    @Published var allCouns: [CoinModel] = []
+    @Published var allCoins: [CoinModel] = []
     @Published var portfolioCoins: [CoinModel] = []
     
+    private let dataSevice = CounDataService()
+    private var cancellables = Set<AnyCancellable>()
+    
     init(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.allCouns.append(DeveloperPreview.instance.coin)
-            self.portfolioCoins.append(DeveloperPreview.instance.coin)
-        }
+        addSubscribers()
+    }
+    func addSubscribers(){
+        dataSevice.$allCoins
+            .sink { [weak self] (retunCoins) in
+                self?.allCoins = retunCoins
+            }
+            .store(in: &cancellables)
     }
 }
 

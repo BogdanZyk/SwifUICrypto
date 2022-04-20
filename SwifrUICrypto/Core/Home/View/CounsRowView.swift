@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CounsRowView: View {
-    let coun: CoinModel
+    let coin: CoinModel
     let showHoldingsColums: Bool
     var body: some View {
         HStack(spacing: 0){
@@ -26,9 +26,9 @@ struct CounsRowView: View {
 struct CounsRowView_Previews: PreviewProvider {
     static var previews: some View {
         Group{
-            CounsRowView(coun: dev.coin, showHoldingsColums: true)
+            CounsRowView(coin: dev.coin, showHoldingsColums: true)
                 .previewLayout(.sizeThatFits)
-            CounsRowView(coun: dev.coin, showHoldingsColums: true)
+            CounsRowView(coin: dev.coin, showHoldingsColums: true)
                 .previewLayout(.sizeThatFits)
                 .preferredColorScheme(.dark)
         }
@@ -38,13 +38,13 @@ struct CounsRowView_Previews: PreviewProvider {
 extension CounsRowView{
     private var letfColum: some View{
         HStack(spacing: 0){
-            Text("\(coun.rank)")
+            Text("\(coin.rank)")
                 .font(.caption)
                 .foregroundColor(Color.theme.secondaryText)
                 .frame(minWidth: 30)
             Circle()
                 .frame(width: 30, height: 30)
-            Text(coun.symbol.uppercased())
+            Text(coin.symbol.uppercased())
                 .font(.headline)
                 .padding(.leading, 6)
                 .foregroundColor(Color.theme.accent)
@@ -52,19 +52,19 @@ extension CounsRowView{
     }
     private var centerColum: some View{
         VStack(alignment: .trailing){
-            Text(coun.currentHoldingsValue.asCurrencyWith2Decimals())
+            Text(coin.currentHoldingsValue.asCurrencyWith2Decimals())
                 .bold()
-            Text("\((coun.currentHoldings ?? 0).asNumberString())")
+            Text("\((coin.currentHoldings ?? 0).asNumberString())")
         }
         .foregroundColor(Color.theme.accent)
     }
     private var rightColum: some View{
         VStack(alignment: .trailing){
-            Text(coun.currentPrice.asCurrencyWith6Decimals())
+            Text(coin.currentPrice.asCurrencyWith6Decimals())
                 .bold()
                 .foregroundColor(Color.theme.accent)
-            Text(coun.priceChangePercentage24H?.asPercentString() ?? "")
-                .foregroundColor((coun.priceChangePercentage24H ?? 0) >= 0 ? Color.theme.green : Color.theme.red)
+            Text(coin.priceChangePercentage24H?.asPercentString() ?? "")
+                .foregroundColor((coin.priceChangePercentage24H ?? 0) >= 0 ? Color.theme.green : Color.theme.red)
         }
         .frame(minWidth: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
     }

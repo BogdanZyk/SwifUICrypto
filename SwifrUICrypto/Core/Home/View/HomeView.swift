@@ -17,16 +17,15 @@ struct HomeView: View {
                 .ignoresSafeArea()
             VStack{
                 homeHeader
+                columnTitle
                 if !showPortfolio{
-                    List{
-                        ForEach(vm.allCouns) {coun in
-                            CounsRowView(coun: coun, showHoldingsColums: false)
-                        }
-                    }
-                    .listStyle(PlainListStyle())
+                    allCoinsList
                     .transition(.move(edge: .leading))
                 }
-                
+                if showPortfolio{
+                    portfolioCoinsList
+                        .transition(.move(edge: .trailing))
+                }
                 Spacer(minLength: 0)
             }
         }
@@ -67,6 +66,38 @@ extension HomeView{
                     }
                 }
         }
+        .padding(.horizontal)
+    }
+    private var allCoinsList: some View{
+        List{
+            ForEach(vm.allCoins) {coin in
+                CounsRowView(coin: coin, showHoldingsColums: false)
+                    .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+            }
+        }
+        .listStyle(PlainListStyle())
+    }
+    private var portfolioCoinsList: some View{
+        List{
+            ForEach(vm.portfolioCoins) {coin in
+                CounsRowView(coin: coin, showHoldingsColums: true)
+                    .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+            }
+        }
+        .listStyle(PlainListStyle())
+    }
+    private var columnTitle: some View{
+        HStack{
+            Text("Coin")
+            Spacer()
+            if showPortfolio{
+                Text("Holdings")
+            }
+            Text("Price")
+                .frame(minWidth: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+        }
+        .font(.caption)
+        .foregroundColor(Color.theme.secondaryText)
         .padding(.horizontal)
     }
 }

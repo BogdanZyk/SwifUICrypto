@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A9CDCF228108D2600525D65 /* CounDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CDCF128108D2600525D65 /* CounDataService.swift */; };
+		5A9CDCF5281094DD00525D65 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CDCF4281094DD00525D65 /* NetworkingManager.swift */; };
 		5ACC97FF280F38850048FB19 /* SwifrUICryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACC97FE280F38850048FB19 /* SwifrUICryptoApp.swift */; };
 		5ACC9801280F38850048FB19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACC9800280F38850048FB19 /* ContentView.swift */; };
 		5ACC9806280F38870048FB19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ACC9805280F38870048FB19 /* Preview Assets.xcassets */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A9CDCF128108D2600525D65 /* CounDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounDataService.swift; sourceTree = "<group>"; };
+		5A9CDCF4281094DD00525D65 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		5ACC97FB280F38850048FB19 /* Crypto Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ACC97FE280F38850048FB19 /* SwifrUICryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwifrUICryptoApp.swift; sourceTree = "<group>"; };
 		5ACC9800280F38850048FB19 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +68,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A9CDCF028108CEC00525D65 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5A9CDCF128108D2600525D65 /* CounDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5A9CDCF32810947700525D65 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5A9CDCF4281094DD00525D65 /* NetworkingManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		5ACC97F2280F38850048FB19 = {
 			isa = PBXGroup;
 			children = (
@@ -83,11 +103,13 @@
 		5ACC97FD280F38850048FB19 /* SwifrUICrypto */ = {
 			isa = PBXGroup;
 			children = (
+				5ACC980E280F3A5E0048FB19 /* Extensions */,
+				5A9CDCF32810947700525D65 /* Utilities */,
+				5A9CDCF028108CEC00525D65 /* Services */,
 				5ACC97FE280F38850048FB19 /* SwifrUICryptoApp.swift */,
 				5ACC9800280F38850048FB19 /* ContentView.swift */,
 				5ACC9827280F3B4B0048FB19 /* Core */,
 				5ACC981B280F3ADF0048FB19 /* Models */,
-				5ACC980E280F3A5E0048FB19 /* Extensions */,
 				5ACC980C280F39C70048FB19 /* Assets.xcassets */,
 				5ACC9804280F38870048FB19 /* Preview Content */,
 			);
@@ -257,10 +279,12 @@
 				5ACC9826280F3ADF0048FB19 /* CoinDetailModel.swift in Sources */,
 				5ACC9834280F40780048FB19 /* CircleButtonAnimationView.swift in Sources */,
 				5ACC9825280F3ADF0048FB19 /* StatisticModel.swift in Sources */,
+				5A9CDCF228108D2600525D65 /* CounDataService.swift in Sources */,
 				5ACC9817280F3A5E0048FB19 /* String.swift in Sources */,
 				5ACC9815280F3A5E0048FB19 /* Date.swift in Sources */,
 				5ACC9836280F481A0048FB19 /* CounsRowView.swift in Sources */,
 				5ACC981A280F3A5E0048FB19 /* Color.swift in Sources */,
+				5A9CDCF5281094DD00525D65 /* NetworkingManager.swift in Sources */,
 				5ACC9832280F3CC00048FB19 /* CircleButtonView.swift in Sources */,
 				5ACC9818280F3A5E0048FB19 /* Double.swift in Sources */,
 				5ACC9822280F3ADF0048FB19 /* CoinModel.swift in Sources */,
