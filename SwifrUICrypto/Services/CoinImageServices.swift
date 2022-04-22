@@ -18,8 +18,9 @@ class CoinImageServices{
         self.coin = coin
        getCounImage()
     }
-//https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579
+    
     private func getCounImage(){
+        print("download image")
         guard let url = URL(string: coin.image) else {return}
         imageSubscription = NetworkingManager.download(url: url)
             .tryMap({ (data) -> UIImage? in
