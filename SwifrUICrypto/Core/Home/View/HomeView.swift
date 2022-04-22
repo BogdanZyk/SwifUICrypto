@@ -17,6 +17,7 @@ struct HomeView: View {
                 .ignoresSafeArea()
             VStack{
                 homeHeader
+                SearchBarView(searchText: $vm.searchText)
                 columnTitle
                 if !showPortfolio{
                     allCoinsList
