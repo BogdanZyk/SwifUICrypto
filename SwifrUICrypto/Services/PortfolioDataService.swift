@@ -15,7 +15,7 @@ class PortfolioDataService{
     private let containerName: String = "PortfolioContainer"
     private let entityName: String = "PortfolioEntity"
     
-    @Publisher var saveEntities: [PortfolioEntity] = []
+    @Published var saveEntities: [PortfolioEntity] = []
     
     init(){
         container = NSPersistentContainer(name: containerName)

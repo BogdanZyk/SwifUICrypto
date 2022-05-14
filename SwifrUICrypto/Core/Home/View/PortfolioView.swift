@@ -53,13 +53,13 @@ extension PortfolioView{
     private var coinLogolist: some View{
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack(spacing: 10){
-                ForEach(vm.allCoins) { coin in
+                ForEach(vm.searchText.isEmpty ? vm.portfolioCoins : vm.allCoins) { coin in
                     CoinLogoView(coin: coin)
                         .frame(width: 75)
                         .padding(4)
                         .onTapGesture {
                             withAnimation(.easeIn) {
-                                selectedCoun = coin
+                                updateSelectedCoin(coun: coin)
                             }
                         }
                         .background(RoundedRectangle(cornerRadius: 10)
@@ -68,6 +68,15 @@ extension PortfolioView{
             }
             .frame(height: 120)
             .padding(.leading)
+        }
+    }
+    private func updateSelectedCoin(coun: CoinModel){
+        selectedCoun = coun
+        if let portfolioCoin = vm.portfolioCoins.first(where: {$0.id == coun.id}),
+           let amount = portfolioCoin.currentHoldings {
+            quantity = "\(amount)"
+        }else{
+            quantity = ""
         }
     }
     private func getCoinValue() -> Double{
@@ -112,15 +121,15 @@ extension PortfolioView{
                 Text("Save".uppercased())
             }
             .opacity( (selectedCoun != nil && selectedCoun?.currentHoldings != Double(quantity)) ? 1 : 0)
-
-            
         }
         .font(.headline)
     }
     private func saveButtonPressed(){
-        guard let coin = selectedCoun else {return}
+        guard let coin = selectedCoun, let amout = Double(quantity) else {return}
+        vm.updatePortfolio(coin: coin, amoun: amout)
         withAnimation(.easeIn){
             showCheckmarck = true
+            removeSelectedCoin()
         }
         UIApplication.shared.endEditing()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {

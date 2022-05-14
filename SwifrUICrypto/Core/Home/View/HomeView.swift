@@ -45,7 +45,7 @@ struct HomeView_Previews: PreviewProvider {
                 .navigationBarHidden(true)
                 
         }
-        .preferredColorScheme(.light)
+        .preferredColorScheme(.dark)
         .environmentObject(dev.homeVM)
     }
 }
@@ -106,6 +106,14 @@ extension HomeView{
             }
             Text("Price")
                 .frame(minWidth: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+            Button {
+                withAnimation(.linear(duration: 2.0)) {
+                    
+                }
+            } label: {
+                Image(systemName: "goforward")
+            }
+
         }
         .font(.caption)
         .foregroundColor(Color.theme.secondaryText)

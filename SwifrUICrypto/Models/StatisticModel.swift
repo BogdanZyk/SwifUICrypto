@@ -2,7 +2,7 @@
 //  StatisticModel.swift
 //  SwiftfulCrypto
 //
-//  Created by Nick Sarno on 5/9/21.
+//  Created by Богдан Зыков on 20.04.2022.
 //
 
 import Foundation
