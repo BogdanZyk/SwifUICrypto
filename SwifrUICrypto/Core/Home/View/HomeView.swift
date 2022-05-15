@@ -99,21 +99,49 @@ extension HomeView{
     }
     private var columnTitle: some View{
         HStack{
-            Text("Coin")
+            HStack(spacing: 4){
+                Text("Coin")
+                Image(systemName: "chevron.down")
+                    .rotationEffect(Angle(degrees: vm.sortOption == .rankReversed ? 180 : 0))
+            }
+            .onTapGesture {
+                withAnimation(.default){
+                    vm.sortOption = vm.sortOption == .rankReversed ? .rank : .rankReversed
+                }
+            }
+            
             Spacer()
             if showPortfolio{
-                Text("Holdings")
+                HStack(spacing: 4){
+                    Text("Holdings")
+                    Image(systemName: "chevron.down")
+                        .rotationEffect(Angle(degrees: vm.sortOption == .holdingsReversed ? 180 : 0))
+                }
+                .onTapGesture {
+                    withAnimation(.default){
+                        vm.sortOption = vm.sortOption == .holdingsReversed ? .holdings : .holdingsReversed
+                    }
+                }
             }
-            Text("Price")
-                .frame(minWidth: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+            HStack(spacing: 4){
+                Text("Price")
+                Image(systemName: "chevron.down")
+                    .rotationEffect(Angle(degrees: vm.sortOption == .priceRewersed ? 180 : 0))
+            }
+            .frame(minWidth: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
+            .onTapGesture {
+                withAnimation(.default){
+                    vm.sortOption = vm.sortOption == .priceRewersed ? .price : .priceRewersed
+                }
+            }
             Button {
                 withAnimation(.linear(duration: 2.0)) {
-                    
+                    vm.reloadData()
                 }
             } label: {
                 Image(systemName: "goforward")
             }
-
+            .rotationEffect(Angle(degrees: vm.isReloading ? 300 : 0), anchor: .center)
         }
         .font(.caption)
         .foregroundColor(Color.theme.secondaryText)
