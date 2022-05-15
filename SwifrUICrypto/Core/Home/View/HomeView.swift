@@ -13,6 +13,7 @@ struct HomeView: View {
     @State private var showPortfolioView: Bool = false
     @State private var selectedCoin: CoinModel? = nil
     @State private var showDetailView: Bool = false
+    @State private var showSettingView: Bool = false
     var body: some View {
         ZStack{
             Color.theme.background
@@ -35,6 +36,9 @@ struct HomeView: View {
                         .transition(.move(edge: .trailing))
                 }
                 Spacer(minLength: 0)
+            }
+            .sheet(isPresented: $showSettingView) {
+                SettingView(close: $showSettingView)
             }
         }
         .background(
@@ -67,6 +71,8 @@ extension HomeView{
                 .onTapGesture {
                     if showPortfolio{
                         showPortfolioView.toggle()
+                    }else{
+                        showSettingView.toggle()
                     }
                 }
                 .background(CircleButtonAnimationView(animate: $showPortfolio))
