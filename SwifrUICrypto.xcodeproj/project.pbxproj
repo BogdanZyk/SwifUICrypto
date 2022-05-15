@@ -26,6 +26,7 @@
 		5AA535672831316D00221FDA /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA535662831316D00221FDA /* DetailView.swift */; };
 		5AA5356928313E5500221FDA /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA5356828313E5500221FDA /* DetailViewModel.swift */; };
 		5AA5356B28313EA300221FDA /* CoinDetailDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA5356A28313EA300221FDA /* CoinDetailDataService.swift */; };
+		5AA5356D28315DF500221FDA /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA5356C28315DF500221FDA /* ChartView.swift */; };
 		5ABC5A7C283076CC006C741A /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5A7B283076CC006C741A /* HapticManager.swift */; };
 		5ACC97FF280F38850048FB19 /* SwifrUICryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACC97FE280F38850048FB19 /* SwifrUICryptoApp.swift */; };
 		5ACC9801280F38850048FB19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACC9800280F38850048FB19 /* ContentView.swift */; };
@@ -68,6 +69,7 @@
 		5AA535662831316D00221FDA /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		5AA5356828313E5500221FDA /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		5AA5356A28313EA300221FDA /* CoinDetailDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailDataService.swift; sourceTree = "<group>"; };
+		5AA5356C28315DF500221FDA /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		5ABC5A7B283076CC006C741A /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		5ACC97FB280F38850048FB19 /* Crypto Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ACC97FE280F38850048FB19 /* SwifrUICryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwifrUICryptoApp.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				5AA535662831316D00221FDA /* DetailView.swift */,
+				5AA5356C28315DF500221FDA /* ChartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				5ACC981A280F3A5E0048FB19 /* Color.swift in Sources */,
 				5A709C742814084100428E80 /* PortfolioContainer.xcdatamodeld in Sources */,
 				5A9CDCF5281094DD00525D65 /* NetworkingManager.swift in Sources */,
+				5AA5356D28315DF500221FDA /* ChartView.swift in Sources */,
 				5ACC9832280F3CC00048FB19 /* CircleButtonView.swift in Sources */,
 				5ACC9818280F3A5E0048FB19 /* Double.swift in Sources */,
 				5A709C76281408FD00428E80 /* PortfolioDataService.swift in Sources */,
