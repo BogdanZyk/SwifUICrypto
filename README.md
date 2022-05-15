@@ -10,9 +10,9 @@ MVVM architecture, Combine, Core Data, Rest API (coingekto.com), IOS 15.0, devic
 
 ## Light and Dark Mode
 
-<img align="left" src="screenshots/gif/home.gif" height="400">
-<img align="left" src="screenshots/gif/search.gif" height="400">
-<img align="left" src="screenshots/gif/addportfolio.gif"height="400">
+<img align="left" src="screenshots/gif/home.gif" height="500">
+<img align="left" src="screenshots/gif/search.gif" height="500">
+<img align="left" src="screenshots/gif/addportfolio.gif"height="500">
 
 
 <div align="center">
