@@ -28,9 +28,10 @@
 		5AA5356B28313EA300221FDA /* CoinDetailDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA5356A28313EA300221FDA /* CoinDetailDataService.swift */; };
 		5AA5356D28315DF500221FDA /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA5356C28315DF500221FDA /* ChartView.swift */; };
 		5AA5357D2831824500221FDA /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA5357C2831824500221FDA /* SettingView.swift */; };
+		5AA53581283188E700221FDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AA53580283188E700221FDA /* LaunchScreen.storyboard */; };
+		5AA5358328318B6400221FDA /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA5358228318B6400221FDA /* LaunchScreenView.swift */; };
 		5ABC5A7C283076CC006C741A /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABC5A7B283076CC006C741A /* HapticManager.swift */; };
 		5ACC97FF280F38850048FB19 /* SwifrUICryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACC97FE280F38850048FB19 /* SwifrUICryptoApp.swift */; };
-		5ACC9801280F38850048FB19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACC9800280F38850048FB19 /* ContentView.swift */; };
 		5ACC9806280F38870048FB19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ACC9805280F38870048FB19 /* Preview Assets.xcassets */; };
 		5ACC980D280F39C70048FB19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ACC980C280F39C70048FB19 /* Assets.xcassets */; };
 		5ACC9815280F3A5E0048FB19 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACC980F280F3A5E0048FB19 /* Date.swift */; };
@@ -72,10 +73,12 @@
 		5AA5356A28313EA300221FDA /* CoinDetailDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailDataService.swift; sourceTree = "<group>"; };
 		5AA5356C28315DF500221FDA /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		5AA5357C2831824500221FDA /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		5AA5357E2831888C00221FDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5AA53580283188E700221FDA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5AA5358228318B6400221FDA /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		5ABC5A7B283076CC006C741A /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		5ACC97FB280F38850048FB19 /* Crypto Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Crypto Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ACC97FE280F38850048FB19 /* SwifrUICryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwifrUICryptoApp.swift; sourceTree = "<group>"; };
-		5ACC9800280F38850048FB19 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5ACC9805280F38870048FB19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5ACC980C280F39C70048FB19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5ACC980F280F3A5E0048FB19 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -146,6 +149,15 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		5AA5357F283188C800221FDA /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				5AA53580283188E700221FDA /* LaunchScreen.storyboard */,
+				5AA5358228318B6400221FDA /* LaunchScreenView.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
 		5ABC5A7D283130F8006C741A /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,11 +203,11 @@
 		5ACC97FD280F38850048FB19 /* SwifrUICrypto */ = {
 			isa = PBXGroup;
 			children = (
+				5AA5357E2831888C00221FDA /* Info.plist */,
 				5ACC980E280F3A5E0048FB19 /* Extensions */,
 				5A9CDCF32810947700525D65 /* Utilities */,
 				5A9CDCF028108CEC00525D65 /* Services */,
 				5ACC97FE280F38850048FB19 /* SwifrUICryptoApp.swift */,
-				5ACC9800280F38850048FB19 /* ContentView.swift */,
 				5ACC9827280F3B4B0048FB19 /* Core */,
 				5ACC981B280F3ADF0048FB19 /* Models */,
 				5ACC980C280F39C70048FB19 /* Assets.xcassets */,
@@ -241,6 +253,7 @@
 		5ACC9827280F3B4B0048FB19 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5AA5357F283188C800221FDA /* Launch */,
 				5AA5357B2831823400221FDA /* Settings */,
 				5ABC5A7D283130F8006C741A /* Detail */,
 				5ACC982F280F3C880048FB19 /* Components */,
@@ -356,6 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AA53581283188E700221FDA /* LaunchScreen.storyboard in Resources */,
 				5ACC980D280F39C70048FB19 /* Assets.xcassets in Resources */,
 				5ACC9806280F38870048FB19 /* Preview Assets.xcassets in Resources */,
 			);
@@ -369,7 +383,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A709C712813FEC800428E80 /* View.swift in Sources */,
-				5ACC9801280F38850048FB19 /* ContentView.swift in Sources */,
 				5A709C612813295B00428E80 /* LocalFileManager.swift in Sources */,
 				5AA535672831316D00221FDA /* DetailView.swift in Sources */,
 				5A709C6B28134F6500428E80 /* PortfolioView.swift in Sources */,
@@ -391,6 +404,7 @@
 				5A9CDCF228108D2600525D65 /* CounDataService.swift in Sources */,
 				5AA5357D2831824500221FDA /* SettingView.swift in Sources */,
 				5ACC9817280F3A5E0048FB19 /* String.swift in Sources */,
+				5AA5358328318B6400221FDA /* LaunchScreenView.swift in Sources */,
 				5A709C6F2813560600428E80 /* CoinLogoView.swift in Sources */,
 				5A9CDCFC2810A13100525D65 /* CoinImageViewModel.swift in Sources */,
 				5ACC9815280F3A5E0048FB19 /* Date.swift in Sources */,
@@ -540,9 +554,10 @@
 				DEVELOPMENT_TEAM = 92PU6D6MCQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwifrUICrypto/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -570,9 +585,10 @@
 				DEVELOPMENT_TEAM = 92PU6D6MCQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwifrUICrypto/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
