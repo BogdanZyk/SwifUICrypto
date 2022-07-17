@@ -1,19 +1,34 @@
-# SwiftUICrypto
+# Crypto tracker app 
 
-Crypto tracker app 
 
 ### About
 This is an app for monitoring cryptocurrency exchanges and saving your cryptocurrencies to your coins portfolio.
 It uses SwiftUI and is written 100% Swift. The project benefits from multi-threading, publishers/subscribers, and date persistanse.
 
-MVVM architecture, Combine, Core Data, Rest API (coingekto.com), IOS 15.0, devices: iphone, ipad
 
-## Light and Dark Mode
+## Includes ( ALL SWIFTUI )
+- MVVM architecture
+- Combine Framework
+- Core Data
+- Rest API (coingekto.com)
+- Custom Modifiers
+- Animations
+- Light and Dark Mode
+- Devices: iphone, ipad
 
-<img align="left" src="screenshots/gif/home.gif" height="500">
-<img align="left" src="screenshots/gif/search.gif" height="500">
-<img align="left" src="screenshots/gif/addportfolio.gif"height="500">
 
+
+## Video
+<div align="center">
+<img src="screenshots/gif/home.gif" height="500">
+<img src="screenshots/gif/search.gif" height="500">
+<img src="screenshots/gif/addportfolio.gif"height="500">
+</div>
+
+
+## Screenshots 📷
+
+### Light theme
 
 <div align="center">
   <img src="screenshots/launchscreen.png" height="350" alt="Screenshot"/>
@@ -21,6 +36,10 @@ MVVM architecture, Combine, Core Data, Rest API (coingekto.com), IOS 15.0, devic
 <img src="screenshots/details.light.png" height="350" alt="Screenshot"/>
 <img src="screenshots/portfolio.light.png" height="350" alt="Screenshot"/>
 <img src="screenshots/edit.light.png" height="350" alt="Screenshot"/>
+</div>
+
+### Dark theme
+<div align="center">
 <img src="screenshots/home.dark.png" height="350" alt="Screenshot"/>
 <img src="screenshots/home2.dark.png" height="350" alt="Screenshot"/>
 <img src="screenshots/portfolio.dark.png" height="350" alt="Screenshot"/>
